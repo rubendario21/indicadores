@@ -1,0 +1,18 @@
+# /etc/systemd/system/indicadores-dashboard.service
+# Activar: systemctl daemon-reload && systemctl enable --now indicadores-dashboard
+
+[Unit]
+Description=Dashboard de indicadores de gestión
+After=network.target
+
+[Service]
+User=indicadores
+Group=indicadores
+WorkingDirectory=/opt/indicadores
+# Un solo worker: la caché de indicadores vive en memoria del proceso
+ExecStart=/opt/indicadores/.venv/bin/uvicorn dashboard:app --host 127.0.0.1 --port 8000 --workers 1 --proxy-headers
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

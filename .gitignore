@@ -1,0 +1,23 @@
+# Credenciales: nunca al repositorio (usa .env.example como plantilla)
+.env
+.env.*
+!.env.example
+
+# Entorno de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Reportes generados con datos de la empresa
+salida/
+vista_previa.html
+vista_previa_correo.html
+*.pdf
+*.xlsx
+
+# Editor y sistema
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

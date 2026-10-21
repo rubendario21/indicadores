@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingresar · Indicadores de gestión</title>
+<link rel="stylesheet" href="/static/estilos.css">
+</head>
+<body class="pagina-login">
+<main class="login">
+  <form class="login-caja" method="post" action="/login">
+    <div class="login-marca">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <h1>Indicadores de gestión</h1>
+        <p>Escenarios Deportivos SAS</p>
+      </div>
+    </div>
+    <div class="login-error" id="error" hidden>Usuario o contraseña incorrectos.</div>
+    <label>Usuario
+      <input name="usuario" autocomplete="username" required autofocus>
+    </label>
+    <label>Contraseña
+      <input name="clave" type="password" autocomplete="current-password" required>
+    </label>
+    <button type="submit" class="boton boton-primario">Ingresar</button>
+  </form>
+</main>
+<script>
+  if (new URLSearchParams(location.search).has("error")) document.getElementById("error").hidden = false;
+</script>
+</body>
+</html>

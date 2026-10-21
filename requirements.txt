@@ -1,0 +1,13 @@
+pandas
+sqlalchemy
+pyodbc
+matplotlib
+openpyxl
+msal
+requests
+python-dotenv
+xhtml2pdf
+fastapi
+uvicorn[standard]
+itsdangerous
+python-multipart
